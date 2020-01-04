@@ -83,6 +83,7 @@ export function isValidUsername(username: string): boolean {
  * @param str The string to clean.
  */
 export function cleanString(str: string): string {
+	console.log(str);
 	return str.replace(/\s/g, '').toUpperCase();
 }
 
