@@ -1,4 +1,4 @@
-import { Worlds } from '../dist';
+import { Worlds } from '../src';
 
 import test from 'tape';
 

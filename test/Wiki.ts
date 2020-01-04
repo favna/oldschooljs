@@ -1,4 +1,4 @@
-import { Wiki } from '../dist';
+import { Wiki } from '../src';
 
 import test from 'tape';
 

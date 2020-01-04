@@ -1,4 +1,4 @@
-import { Items } from '../dist';
+import { Items } from '../src';
 
 import test from 'tape';
 

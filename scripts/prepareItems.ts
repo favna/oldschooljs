@@ -1,7 +1,9 @@
 import fetch from 'node-fetch';
-import { ItemCollection } from '../dist/structures/Items';
+import { ItemCollection } from '../src/structures/Items';
 import { writeFileSync } from 'fs';
+import { join } from 'path';
 
+const itemsJsonPath = join(__dirname, '..', 'src', 'data', 'items', 'item_data.json');
 const itemNameMap: { [key: string]: string } = {};
 
 export default async function prepareItems(): Promise<void> {
@@ -15,6 +17,6 @@ export default async function prepareItems(): Promise<void> {
 		itemNameMap[item.id] = item.name;
 	}
 
-	writeFileSync('./src/data/items/item_data.json', JSON.stringify(itemNameMap, null, 4));
+	writeFileSync(itemsJsonPath, JSON.stringify(itemNameMap, null, 4));
 	console.log('Prepared items.');
 }

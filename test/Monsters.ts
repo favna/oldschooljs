@@ -1,7 +1,7 @@
-import { Monsters, Items, Clues } from '../dist';
+import { Monsters, Items, Clues } from '../src';
+import { ItemBank } from '../src/meta/types';
 
 import test from 'tape';
-import { ItemBank } from '../dist/meta/types';
 
 function withinThreshold(source: number, target: number, epsilon = 5): boolean {
 	if (source === target) return true;

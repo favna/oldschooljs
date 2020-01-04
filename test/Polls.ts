@@ -1,4 +1,4 @@
-import { Polls } from '../dist';
+import { Polls } from '../src';
 
 import test from 'tape';
 

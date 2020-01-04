@@ -1,4 +1,4 @@
-import { Hiscores } from '../dist';
+import { Hiscores } from '../src';
 
 import test from 'tape';
 

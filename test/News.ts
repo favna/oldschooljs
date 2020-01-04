@@ -1,4 +1,4 @@
-import { News } from '../dist';
+import { News } from '../src';
 
 import test from 'tape';
 

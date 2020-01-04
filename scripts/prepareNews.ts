@@ -1,14 +1,16 @@
-import { News } from '../dist';
+import { News } from '../src';
 import { readFileSync, writeFileSync } from 'fs';
+import { join } from 'path';
 
-const currentNews = JSON.parse(readFileSync('./src/data/news/news_archive.json').toString());
+const newsJsonPath = join(__dirname, '..', 'src', 'data', 'news', 'news_archive.json');
+const currentNews = JSON.parse(readFileSync(newsJsonPath).toString());
 
 export default async function prepareNews(): Promise<void> {
 	const newArticles = await News.fetchNewArticles();
 	console.log(`Found ${newArticles ? newArticles.length : 0} news articles to be added.`);
 	if (newArticles) {
 		writeFileSync(
-			'./src/data/news/news_archive.json',
+			newsJsonPath,
 			JSON.stringify(
 				[...currentNews, ...newArticles.sort((a, b) => a.date - b.date)],
 				null,

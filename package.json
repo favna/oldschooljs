@@ -15,8 +15,8 @@
 		"test:run": "ts-node test/suite",
 		"test:lint": "eslint --ext ts src",
 		"lint": "eslint --ext ts src --fix",
-		"build": "tsc -p .",
-		"dev": "tsc --watch -p .",
+		"build": "tsc -b src",
+		"dev": "tsc -b src --watch",
 		"prepareData": "npm run build && npm run prepareData:run",
 		"prepareData:run": "ts-node scripts/prepare"
 	},

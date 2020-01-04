@@ -1,4 +1,4 @@
-import { Util } from '../dist';
+import { Util } from '../src';
 
 import test from 'tape';
 

@@ -1,0 +1,17 @@
+{
+	"extends": "../tsconfig.json",
+	"compilerOptions": {
+		"composite": true,
+		"strictNullChecks": false,
+		"sourceMap": true,
+		"declaration": true,
+		"declarationMap": true,
+		"removeComments": false,
+		"outDir": "../dist",
+		"target": "ES6",
+		"resolveJsonModule": true,
+		"esModuleInterop": true
+	},
+	"include": ["**/*.ts", "**/*.json"],
+	"exclude": ["./tsconfig.json"]
+}
